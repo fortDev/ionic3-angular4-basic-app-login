@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Authenticate</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form (ngSubmit)="login()" #registerForm="ngForm">
+        <ion-row>
+            <ion-col>
+                <ion-list inset>
+                    <ion-item>
+                        <ion-input type="text" placeholder="Username" name="username" [(ngModel)]="user.username" required></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="user.password" required></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="signin-col">
+                <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-content>
