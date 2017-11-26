@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 import { AuthenticateProvider } from '../../providers/authenticate/authenticate';
 import { HomePage } from '../home/home';
@@ -7,7 +7,6 @@ import { HomePage } from '../home/home';
 /**
  * Authenticate page.
  */
-@IonicPage()
 @Component({
     selector: 'page-authenticate',
     templateUrl: 'authenticate.html',
